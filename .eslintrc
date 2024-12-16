@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "@ssvt/eslint-config-react/default",
+    "@ssvt/eslint-config-react/typescript",
+    "@ssvt/eslint-config-react/prettier"
+  ],
+  "ignorePatterns": [
+    "dist/**"
+  ],
+  "rules": {
+    "spaced-comment": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/ban-types": "off"
+  }
+}

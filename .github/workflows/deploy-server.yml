@@ -1,0 +1,58 @@
+name: Deploy Strapi to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - packages/server/**
+
+jobs:
+  deploy-to-aws-eb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set node version
+        id: node_version
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ steps.node_version.outputs.NVMRC }}
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn workspaces focus server
+
+      - name: Run build
+        run: NODE_ENV=production yarn workspace server build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.SERVER_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SERVER_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.SERVER_AWS_REGION }}
+
+      - name: Current timestamp
+        id: timestamp
+        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H-%M-%S-%3NZ')"
+
+      - name: Generate deployment file
+        run: |
+          cd packages/server
+          zip -r ../../deploy.zip .
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v20
+        with:
+          aws_access_key: ${{ secrets.SERVER_AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.SERVER_AWS_SECRET_ACCESS_KEY }}
+          region: ${{ secrets.SERVER_AWS_REGION }}
+          application_name: ${{ secrets.SERVER_EB_APPLICATION_NAME }}
+          environment_name: ${{ secrets.SERVER_EB_ENVIRONMENT_NAME }}
+          version_label: '${{ steps.timestamp.outputs.date }}'
+          deployment_package: deploy.zip

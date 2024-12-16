@@ -1,0 +1,58 @@
+{
+  "name": "ssvt.co.kr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.3",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn client:dev\" \"yarn server:dev\"",
+    "build": "yarn client:build && yarn server:build",
+    "prod": "concurrently \"yarn client:serve\" \"yarn server:start\"",
+    "client:dev": "yarn workspace client dev",
+    "client:build": "yarn workspace client build",
+    "client:serve": "yarn workspace client serve",
+    "client:clean": "yarn workspace client clean",
+    "server:dev": "yarn workspace server dev",
+    "server:start": "yarn workspace server start",
+    "server:build": "yarn workspace server build",
+    "strapi": "yarn workspace server strapi",
+    "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --cache",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "author": "SSVT",
+  "repository": "https://github.com/s2vt/ssvt.co.kr",
+  "bugs": {
+    "url": "https://github.com/s2vt/ssvt.co.kr/issues"
+  },
+  "devDependencies": {
+    "@ssvt/eslint-config-react": "^1.1.4",
+    "@types/eslint": "^8.4.6",
+    "@types/prettier": "^2.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "26.1.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  },
+  "lint-staged": {
+    "packages/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix --cache"
+    ]
+  }
+}

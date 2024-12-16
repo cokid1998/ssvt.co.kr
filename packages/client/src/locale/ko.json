@@ -1,0 +1,45 @@
+{
+  "translations" : {
+    "COMMON":{
+      "COMPANY_NAME" : "에스에스브이티",
+      "OWNER" : "대표",
+      "OWNER_NAME" : "박종현"
+    },
+    "COMPANY" : {
+      "SSVT_VISION" : "SSVT VISON",
+      "BANNER_TITLE" : "조선해양의 미래,\n스마트 해양을 이끌어갈\n기술 벤처",
+      "BANNER_DESCRIPTION" : "투명하고 신뢰할 수 있는 블록체인 기술의 가치와 함께 인공지능 기술을 기반으로 조선, 해운, 항만산업을 연결하여 높은 가치를 제공하고자 끊임없이 고민하고 노력하는 기업입니다.",
+      "CEO_MESSAGE" : "CEO MESSAGE",
+      "CEO_MESSAGE_TITLE" : "스마트 해양의 패러다임을 위해",
+      "CEO_MESSAGE_FIRST_PARAGRAPH" : "세계에서 손꼽히는 우리나라의 조선 · 해운 · 항만산업이 글로벌 경쟁력을 갖추기 위해서는 블록체인과 인공지능 등 신기술을 활용한 혁신적인 스마트 해양화가 필수적입니다.",
+      "CEO_MESSAGE_SECOND_PARAGRAPH" : "스마스선박벤처기술에서는 해양산업과 구성원 모두를 아우르는 R&amp;D 프로젝트를 추진하고 있으며, 도막의 두께와 품질을 자동으로 측정하는 “스마트 선박도막측정 솔루션”을 비롯하여 조선해양산업을 위한 다양한 기술 개발에 매진하고 있습니다.",
+      "CEO_MESSAGE_THIRD_PARAGRAPH" : "아울러, 해양산업에 필요한 서비스를 IT 기술과의 융합을 통해 확장해 나가고 산업 경쟁력과 종사자들의 만족도를 높일 수 있는 서비스 개발에 힘쓰겠습니다.",
+      "SSVT_TECH" : "SSVT TECH",
+      "SSVT_TECH_TITLE" : "스마트 해양을 이끌어갈 SSVT만의 솔루션",
+      "SSVT_TECH_DESCRIPTION" : "블록체인과 AI, IOT를 기술을 접목하여 체계적인 조선·해양·항만 서비스를 구축합니다",
+      "PANKI" : "PANKI",
+      "PANKI_DESCRIPTION" : "위치측위 기반 스마트 도막 측정 시스템",
+      "OILPASS" : "OILPASS",
+      "OILPASS_DESCRIPTION" : "블록체인 기반 선박유 부정유통방지 솔루션",
+      "OCEANVIEW" : "OCEANVIEW",
+      "OCEANVIEW_DESCRIPTION" : "도선사의 해양 사고 방지를 위한 선박 어라운드뷰 시스템",
+      "PASSTHRU" : "PASSTHRU",
+      "PASSTHRU_DESCRIPTION" : "안전 관리와 직원 신원 확인을 위한 블록체인 기반 조선소 출입관리 시스템",
+      "SSVT_HISTORY" : "SSVT HISTORY",
+      "SSVT_COMAPNY_HISTORY" : "SSVT 회사 연혁",
+      "2017_DESCRIPTION" : "선박도료 사용량 측정 및 패턴 분석을 위한 스마트 센서 연구",
+      "2018_DESCRIPTION" : "스마트 선박 검사 측정 장치 및 블록체인 서비스 개발",
+      "2019_DESCRIPTION" : "환경저감장치 운영 및 블록 체인 인증 서비스 인증",
+      "2020_FIRST_DESCRIPTION" : "스마트 도막측정기기 기능확장 및 서비스개선",
+      "2020_SECOND_DESCRIPTION" : "해상유 원산지 증명서 발행 솔루션",
+      "2020_THIRD_DESCRIPTION" : "블록체인(DID) 기반 조선소 방문객 출입 신청 서비스 개발",
+      "2020_FOURTH_DESCRIPTION" : "도선사 보조 선박 어라운드뷰 시스템",
+      "2021_FIRST_DESCRIPTION" : "스마트 도막측정기기 기능확장 및 서비스개선",
+      "2021_SECOND_DESCRIPTION" : "스마트 도막측정기기 및 디바이스 솔루션 MVP",
+      "2021_THRID_DESCRIPTION" : "스마트 비파괴 검사 디바이스 및 위험 알림 솔루션 상용화",
+      "2021_PANKI_DESCRIPTION" : "블록체인 기반 선박검사 통합관리 솔루션",
+      "2022_FIRST_DESCRIPTION" : "통합품질관리 기능 확장 밒 커스텀 모듈 개발",
+      "2022_SECOND_DESCRIPTION" : "AI기반 최적화 및 EGS 관리 솔루션 개발"
+    }
+  }
+}

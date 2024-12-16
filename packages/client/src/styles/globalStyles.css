@@ -1,0 +1,8 @@
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: inherit;
+}
