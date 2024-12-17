@@ -21,9 +21,7 @@
     "server:build": "yarn workspace server build",
     "strapi": "yarn workspace server strapi",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --cache",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install",
-    "postinstall": "cd .. && husky install app/.husky"
+    "lint-staged": "lint-staged"
   },
   "author": "SSVT",
   "repository": "https://github.com/s2vt/ssvt.co.kr",
@@ -46,7 +44,6 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
-    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "typescript": "^4.8.3"
