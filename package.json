@@ -22,7 +22,8 @@
     "strapi": "yarn workspace server strapi",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --cache",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "cd .. && husky install app/.husky"
   },
   "author": "SSVT",
   "repository": "https://github.com/s2vt/ssvt.co.kr",
@@ -54,7 +55,5 @@
     "packages/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix --cache"
     ]
-  },"engines": {
-  "node": ">=14.x"
-}
+  }
 }
